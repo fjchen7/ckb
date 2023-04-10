@@ -1,0 +1,26 @@
+[package]
+name = "ckb-resource"
+version = "0.110.0-pre"
+license = "MIT"
+authors = ["Nervos Core Dev <dev@nervos.org>"]
+edition = "2021"
+build = "build.rs"
+description = "Bundled resources for the CKB binary."
+homepage = "https://github.com/nervosnetwork/ckb"
+repository = "https://github.com/nervosnetwork/ckb"
+
+[dependencies]
+phf = "0.8.0"
+includedir = "0.6.0"
+serde = { version = "1.0", features = ["derive"] }
+ckb-types = { path = "../util/types", version = "= 0.110.0-pre" }
+ckb-system-scripts = { version = "= 0.5.4" }
+
+[build-dependencies]
+includedir_codegen = "0.6.0"
+walkdir = "2.1.4"
+ckb-types = { path = "../util/types", version = "= 0.110.0-pre" }
+ckb-system-scripts = { version = "= 0.5.4" }
+
+[dev-dependencies]
+tempfile.workspace = true
